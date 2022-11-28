@@ -27,8 +27,7 @@ async function run() {
         })
 
         app.post('/bookings', async (req, res) => {
-            const booking = req.body
-            console.log(booking);
+            const booking = req.body;
             const result = await bookingsCollection.insertOne(booking);
             res.send(result)
         })
